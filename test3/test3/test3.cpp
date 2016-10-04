@@ -19,7 +19,7 @@ int main(int argc,char ** argv)
 	string s2;
 //	cin>>s1;//>>s2;//如果s1输入的时候“   hello   ”输出是“hello”
 	/************************************************
-	while(cin>>s1)//一直input 但不会保留空白符，遇到空白符会进入下一次循环
+	while(cin>>s1)//一直input 但不会保留空白符，遇到空白符会进入下一次循环 当输入Q\n时 将退出循环
 	{
 		//cout<<s1<<endl;
 		s2+=s1+' ';
@@ -36,9 +36,9 @@ int main(int argc,char ** argv)
 
 	/* some operation toupper tolower ispunct isspace and so on
 	string word;
-	while(getline(cin,s2))//能够保留空白符
+	while(getline(cin,s2))//能够保留空白符，输入Q时退出
 	{
-		decltype(s2.size()) punct_cnt=0;
+		decltype(s2.size()) punct_cnt=0;//decltype(v) a，编译器会分析v（v可以是函数语句）的类型从而判断a的类型
 		for(auto &s :s2)
 		{
 			if (ispunct(s))
