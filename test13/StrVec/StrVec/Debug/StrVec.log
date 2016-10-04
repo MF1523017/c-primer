@@ -1,0 +1,13 @@
+﻿  StrVec.cpp
+d:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory(349): error C4996: 'std::_Uninitialized_copy0': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+  d:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory(336): note: 参见“std::_Uninitialized_copy0”的声明
+  e:\c++\c++_primer\for_test\test13\strvec\strvec\strvec.cpp(11): note: 参见对正在编译的函数 模板 实例化“_FwdIt std::uninitialized_copy<const std::string*,std::basic_string<char,std::char_traits<char>,std::allocator<char>>*>(_InIt,_InIt,_FwdIt)”的引用
+          with
+          [
+              _FwdIt=std::basic_string<char,std::char_traits<char>,std::allocator<char>> *,
+              _InIt=const std::string *
+          ]
+  正在生成代码...
+  正在编译...
+  main.cpp
+  正在生成代码...
