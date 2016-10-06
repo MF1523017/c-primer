@@ -12,36 +12,41 @@ using std::endl;
 int main(int argc,char ** argv)
 {
 	/////////////////////string learning************************************************************
-	//int n=10;
-	//string a(n,'a');
+#if 0
+	int n=10;
+	string a(n,'a');//直接初始化
 	string s1;
 	cout<<s1[0]<<endl;//nothing but can compile
-	string s2;
+	string s2=string(10,'1');//显式的创建临时对象用于拷贝初始化
 //	cin>>s1;//>>s2;//如果s1输入的时候“   hello   ”输出是“hello”
-	/************************************************
-	while(cin>>s1)//一直input 但不会保留空白符，遇到空白符会进入下一次循环 当输入Q\n时 将退出循环
+	//***********************************************
+	
+
+	while(cin>>s1)//一直input 但不会保留空白符，遇到空白符会进入下一次循环 当输入Ctrl-Z时 将退出循环
 	{
 		//cout<<s1<<endl;
 		s2+=s1+' ';
 		cout<<s1.size()<<endl;
 		cout<<s2<<endl;
 	}
-	*/
+	
+#endif
 
 
 
 	//************************************************************************************************
 
+#if 0
 
-
-	/* some operation toupper tolower ispunct isspace and so on
+	// some operation toupper tolower ispunct isspace and so on
 	string word;
-	while(getline(cin,s2))//能够保留空白符，输入Q时退出
+	string s2;
+	while(getline(cin,s2))//能够保留空白符，输入Ctrl-Z时退出
 	{
 		decltype(s2.size()) punct_cnt=0;//decltype(v) a，编译器会分析v（v可以是函数语句）的类型从而判断a的类型
 		for(auto &s :s2)
 		{
-			if (ispunct(s))
+			if (ispunct(s))//标点符号为真
 				punct_cnt++;
 			s=toupper(s);
 			s=tolower(s);
@@ -55,46 +60,53 @@ int main(int argc,char ** argv)
 		cout<<s2.size()<<endl;
 	}
 
-	//*/
+#endif	
 	
 	
 	//*****************************************************************
 
 
-
-	/*some test about the index
+#if 0
+	//some test about the index
 	const string hex_s="0123456789ABCDEF";
 	string result;
 	int n;
-	while(cin>>n)
-	
-		if(n<hex_s.size())
-			result=result+hex_s[n];
-
+	while (cin >> n) {//如果你输入了一个非int 类型的则会跳出循环
+		if (n < hex_s.size())
+			result = result + hex_s[n];
+	}
 	cout<<result<<endl;
-	*/
+#endif
 
+#if 0
 	//cout<<s1<<s2<<endl;
-	
-	/************************************************
+	string s1, s2;
+	//************************************************
 	s1="hello";
 	s2="world";
 	string s3=s1+','+s2+'\n';
+	//string s4="hello"+"<"+s2;//不可以这样，不能把字面值直接相加，"hello"是字符串字面值与string完全不一样
+	
 	cout<<s3<<endl;
-	*/
 
-
+#endif
 	//////////////////////////////////////////vector learning****************************************************************
-	/*
+#if 0
 	vector<string>v1(10,"hi");
+	//三种不同迭代器遍历，
 	for(auto v :v1)
-		cout<<v<<endl;//output every string in v1
-	//input 0-99 save in v2
+		cout<<v<<" ";//output every string in v1
+	for (auto b = v1.cbegin(); b != v1.cend(); b++)
+		cout << *b << " ";
+	vector<string>::const_iterator iterv=v1.cbegin();
+	for (iterv; iterv != v1.cend(); ++iterv)
+		cout << *iterv << " ";
+	//input 0-9 save in v2
 	vector<int> v2;
-	for(int i=0;i<100;i++)
+	for(int i=0;i<10;i++)
 		v2.push_back(i);
-	for (int i=0;i<100;i++)
-		cout<<v2[i];
+	for (int i=0;i<10;i++)
+		cout<<v2[i]<<" ";
 
 	vector<int>v3;
 	
@@ -111,8 +123,8 @@ int main(int argc,char ** argv)
 	iter=v3.cbegin();
 	iter1=v3.cend();
 	cout<<iter1-iter<<endl;//iter1-iter is the size of the v3 and is the difference_type which is the int type
-	*/
 	
+#endif
 	
 	
 	
