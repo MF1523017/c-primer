@@ -1,12 +1,37 @@
 #include<iostream>
 #include<string>
+#include<vector>
 using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::vector;
 
 int main(int argc,char **argv)
 {
+#if 1
+	//************Ç¶Ì×if elseÓï¾ä
+	const vector<string> score{ "F","D","C","B","A","A++" };
+	string finalScore;
+	int grade;
+	while (cin >> grade)
+	{
+		if (grade < 60)
+			finalScore = score[0];
+		else
+		{
+			finalScore = score[(grade - 60) / 10 + 1];
+			if (grade != 100) {
+				if (grade % 10>7)
+					finalScore += "+";
+				else if (grade % 10 < 3)
+					finalScore += "-";
+			}
+		}
+		cout << finalScore << endl;
+	}
+#endif
+#if 0
 	///////**************************************************learning switch
 
 	string ts="abcdefihopquuu";
@@ -30,6 +55,8 @@ int main(int argc,char **argv)
 	}
 	cout<<a_cnt<<" "<<oth_cnt<<endl;
 	
+#endif
+#if 0
 	///*************************************learning do while**********************************
 
 	string ending;
@@ -42,7 +69,7 @@ int main(int argc,char **argv)
 		cin>>ending;
 	}while(ending[0]!='n');
 	
-	
+#endif
 	
 	
 	return 0;
