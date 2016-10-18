@@ -12,3 +12,14 @@ eg: test3 就是c++ primer第三章内容的一些代码，每一章的代码里
 	 *  迭代语句
 	 *  跳转语句
 	 *  try语句块和异常操作
+
+* test6 第六章：函数
+	* static and reference
+	* func(const int  )and func(int)
+	* 形参是数组
+	* 返回数组指针，因为数组不能被拷贝，所以函数不能返回数组
+	* inline 内联函数
+	* 函数指针
+	* 重载
+* test7 第七章：类
+	* 新加入了ClassArray类的例子

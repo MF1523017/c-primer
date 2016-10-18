@@ -1,21 +1,2 @@
-﻿生成启动时间为 2016/3/19 15:21:01。
-     1>项目“E:\c++\c++_primer\for_test\test6\test6\test6.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt test6.cpp test66.cpp
-         test66.cpp
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2873: “unit_t”: 符号不能用在 using 声明中
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2513: “int”: 在“=”前没有声明变量
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2062: 意外的类型“unsigned int”
-     1>e:\c++\c++_primer\for_test\test6\test6\test66.cpp(17): warning C4018: “<”: 有符号/无符号不匹配
-         test6.cpp
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2873: “unit_t”: 符号不能用在 using 声明中
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2513: “int”: 在“=”前没有声明变量
-     1>e:\c++\c++_primer\for_test\test6\test6\test6.h(24): error C2062: 意外的类型“unsigned int”
-         正在生成代码...
-     1>已完成生成项目“E:\c++\c++_primer\for_test\test6\test6\test6.vcxproj”(Build 个目标)的操作 - 失败。
-
-生成失败。
-
-已用时间 00:00:00.67
+﻿  test6.cpp
+  test6.vcxproj -> E:\c++\c++_primer\for_test\test6\Debug\test6.exe

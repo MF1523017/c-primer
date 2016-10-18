@@ -2,14 +2,19 @@
 #include<iostream>
 using std::cout;
 using std::endl;
-int count_call()
+int count_call_static()
 {
-	static int c_cnt=0;
+	static int c_cnt=0;//只进行一次初始化，
 	return ++c_cnt;
 }
-int count_call1(int &c_cnt)
+int count_call_reference(int &c_cnt)
 {
 	return ++c_cnt;
+}
+bool is_sentance(const string &s)
+{
+	string::size_type ctr = 0;
+	return find_char(s, '.', ctr) == s.size() - 1 && ctr == 1;
 }
 string::size_type find_char(const string &s,char c,string::size_type &cnt)
 {

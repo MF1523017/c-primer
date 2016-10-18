@@ -7,34 +7,25 @@ using std::istream;
 using std::ostream;
 class Sales_data
 {
+	friend istream &read(istream &is, Sales_data &item);
+	friend ostream &print(ostream &os, Sales_data &item);
 public:
-	string bookNo;
-	unsigned units_sold;
-	double revenue;
-	Sales_data()=default;
+	
+	//Sales_data()=default;
 	//~Sales_data();
 	string isbn()const;
 	Sales_data &combine(const Sales_data &rhs);
 	double avg_price()const;
 	
 	
-//private:
+private:
+	string _bookNo;
+	static unsigned _units_sold;
+	double _revenue;
 
 };
-Sales_data & combine(const Sales_data &rhl);
+
 istream &read(istream &is,Sales_data &item);
 ostream &print(ostream &os,Sales_data &item);
-/*
-Sales_data::Sales_data()
-{
-	;
-}
 
-Sales_data::~Sales_data()
-{
-	;
-}
-
-
-*/
 #endif

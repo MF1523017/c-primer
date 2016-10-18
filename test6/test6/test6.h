@@ -5,9 +5,10 @@
 using std::string;
 //typedef int arrT[10];
 
-int count_call();
-int count_call1(int &c_cnt);
+int count_call_static();
+int count_call_reference(int &c_cnt);
 string::size_type find_char(const string &s,char c,string::size_type &cnt);
+bool is_sentance(const string &s);
 void print(const int *beg,const int *end);
 char &get_val(string &s,string::size_type ix);
 int add(int fs=10,int sd=20);

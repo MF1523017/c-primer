@@ -1,6 +1,8 @@
+#include"salesItem.h"
 #include<iostream>
 #include<string>
 #include<vector>
+#include<stdexcept>
 using std::string;
 using std::cout;
 using std::cin;
@@ -9,7 +11,7 @@ using std::vector;
 
 int main(int argc,char **argv)
 {
-#if 1
+#if 0
 	//************Ç¶Ì×if elseÓï¾ä
 	const vector<string> score{ "F","D","C","B","A","A++" };
 	string finalScore;
@@ -70,7 +72,27 @@ int main(int argc,char **argv)
 	}while(ending[0]!='n');
 	
 #endif
-	
+#if 1
+	//*****************************learning try throw*******************
+
+#endif
+	Sales_item  item1, item2;
+	while (cin >> item1 >> item2) {
+		try {
+			if (item1.isbn() != item2.isbn())
+				throw std::runtime_error("data must refer to same ISBN");
+		
+		}
+		catch (std::runtime_error err)
+		{
+			cout << err.what()
+				<< "\nTryAngin?Enter y or n" << endl;
+			char c;
+			cin >> c;
+			if (c == 'n')
+				break;
+		}
+	}
 	
 	return 0;
 }
