@@ -1,14 +1,19 @@
 #include"shape.h"
 #include<iostream>
+int Shape::ID = 0;
 #if 1
+void Shape::draw()const
+{
+	std::cout << "ghost ,no shape can't draw" << std::endl;
+}
 void Rectangle::draw()const
 {
 	std::cout << "draw Rectangle" << std::endl;
 }
 #endif
-void Ellipse::draw()const
+void Circle::draw()const
 {
-	std::cout << "draw Ellipse" << std::endl;
+	std::cout << "draw Circle" << std::endl;
 }
 void Shape::error(const std::string &msg)const
 {
@@ -20,9 +25,5 @@ void Rectangle::error(const std::string &msg)const
 }
 int Shape::objectID()const
 {
-	return 110;
-}
-int Ellipse::objectID()const//并没有什么卵用
-{
-	return 120;
+	return getID();
 }
