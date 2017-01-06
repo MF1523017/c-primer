@@ -20,6 +20,8 @@ inline const string & shortStr(const string &s1,const string &s2)
 
 int add_3(int tr,int pf(int ,int));
 
+int  testReturn();
+
 //using F=int(int *,int);
 
 

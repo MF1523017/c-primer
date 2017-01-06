@@ -1,5 +1,4 @@
 ﻿  CLibArray.cpp
-  正在生成代码...
-  正在跳过...(未检测到相关更改)
-  LibArray.cpp
-  ClassArray.vcxproj -> E:\c++\c++_primer\for_test\test6\20161008ClassArray\ClassArray\Debug\ClassArray.exe
+h:\c++\c++_primer\for_test\test7\20161008classarray\classarray\classarray\clibarray.cpp(11): warning C4018: “<”: 有符号/无符号不匹配
+  ClassArray.vcxproj -> H:\c++\c++_primer\for_test\test7\20161008ClassArray\ClassArray\Debug\ClassArray.exe
+  ClassArray.vcxproj -> H:\c++\c++_primer\for_test\test7\20161008ClassArray\ClassArray\Debug\ClassArray.pdb (Full PDB)

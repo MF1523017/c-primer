@@ -28,8 +28,20 @@ int main(int argc, char* argv[])
 	};
 #endif
 	
+#if 0
 
-    CArray array;
+    //CArray array;
+	std::vector<elementType> rhs({ 1,2,3,4,5 });
+	CArray array(rhs);
+	CArray array5 = rhs;//只有初始化的是rhs可以转换成array
+	//std::cout << array;
+	//std::cout << array5;
+	CArray test(rhs);
+	test = array + array5;
+	std::cout << test << std::endl;
+#endif
+	//CArray array6;
+	//array6= rhs//错误
 	// 不再需要initial，但应该有正确的初始化
     // array_initial(array); 
 

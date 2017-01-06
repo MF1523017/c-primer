@@ -1,4 +1,42 @@
 #include"CLibArray.h"
+std::ostream &operator<<(std::ostream &os, const CArray &rhs)
+{
+	for (int i = 0; i < rhs.size(); ++i)
+		os << rhs._buff[i] << " ";
+	return os;
+}
+CArray::CArray(std::vector<elementType>rhs):_arraySize(rhs.size()),_arrayCapacity(2*rhs.size())
+{
+	_buff = new elementType[_arrayCapacity];
+	for (int i = 0; i < rhs.size(); ++i)
+		_buff[i] = rhs[i];
+}
+CArray::CArray(const CArray &rhs)
+{
+	*this = rhs;
+}
+CArray &CArray::operator=(const CArray &rhs)
+{
+	if (this == &rhs)
+		return *this;
+	elementPtr buff = new elementType[rhs._arrayCapacity];
+	for (int i = 0; i < rhs.size(); ++i)
+		buff[i] =rhs._buff[i];
+	if(!_buff)
+		delete []_buff;
+	_buff = buff;
+	_arraySize = rhs._arraySize;
+	_arrayCapacity = rhs._arrayCapacity;
+	return *this;
+}
+CArray::~CArray()
+{ 
+	delete[]_buff; 
+	_arrayCapacity = 0; 
+	_arraySize = 0; 
+	_buff = nullptr; 
+}
+
 CArray &CArray::_checkCap(int s)
 {
 	if (s >= _arrayCapacity)
@@ -10,7 +48,7 @@ CArray &CArray::_checkCap(int s)
 }
 CArray &CArray::_recap(int cap)
 {
-		elementPrt tmpbuff = new elementType[cap];
+	elementPtr tmpbuff = new elementType[cap];
 		_arrayCapacity = cap;
 		_arraySize = _arraySize < _arrayCapacity ? _arraySize : _arrayCapacity;
 		for (int i = 0; i < _arraySize; ++i)
@@ -57,4 +95,12 @@ bool CArray::compare(CArray &rst)
 			return false;
 	}
 	return true;
+}
+
+CArray operator+(const CArray &lhs, const CArray &rhs)
+{
+	CArray tmp = lhs;
+	for (int i = 0; i < rhs.size(); ++i)
+		tmp.append(rhs._buff[i]);
+	return CArray(tmp);
 }

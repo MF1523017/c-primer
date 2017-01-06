@@ -1,2 +1,4 @@
 ﻿  test6.cpp
-  test6.vcxproj -> E:\c++\c++_primer\for_test\test6\Debug\test6.exe
+h:\c++\c++_primer\for_test\test6\test6\test6.cpp(22): warning C4018: “<”: 有符号/无符号不匹配
+  test6.vcxproj -> H:\c++\c++_primer\for_test\test6\Debug\test6.exe
+  test6.vcxproj -> H:\c++\c++_primer\for_test\test6\Debug\test6.pdb (Full PDB)

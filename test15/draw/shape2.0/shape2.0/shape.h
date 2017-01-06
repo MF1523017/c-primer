@@ -1,5 +1,63 @@
 #pragma once
 #include<string>
+class Figure
+{
+public:
+	Figure() :_id(0) {};
+	Figure(int id) :_id(id) {}
+	Figure(const Figure &rhs) :_id(rhs._id) {};
+	Figure &operator =(const Figure &rhs) {
+		if (this == &rhs)
+			return *this;
+		_id = rhs._id;
+		return *this;
+	}
+	~Figure() { ; }
+	 virtual void draw() =0;
+private:
+	int _id;
+};
+class Circle :public Figure
+{
+public:
+	Circle(int id, int x, int y, int r) :Figure(id), _x(x), _y(y), _r(r) {};
+	Circle(const Circle &rhs){
+		*this = rhs;
+	};
+	Circle &operator=(const Circle &rhs)
+	{
+		if (this == &rhs)
+			return *this;
+		(Figure&)(*this) = rhs;
+		_x = rhs._x;
+		_y = rhs._y;
+		_r = rhs._r;
+		return *this;
+	}
+private:
+	int _x;
+	int _y;
+	int _r;
+};
+	/*1>  class Circle	size(16) :
+	1>  	+-- -
+	1>   0 | +-- - (base class Figure)
+	1>   0 | | _id
+	1> | +-- -
+	1>   4 | _x
+	1>   8 | _y
+	1>  12 | _r
+	1>  	+-- -*/
+//1>  class Circle	size(20) :
+//	1>  	+-- -
+//	1>   0 | +-- - (base class Figure)
+//	1>   0 | | {vfptr}
+//1>   4 | | _id
+//1> | +-- -
+//1>   8 | _x
+//1>  12 | _y
+//1>  16 | _r
+//1>  	+-- -
 class Shape
 {
 public:
