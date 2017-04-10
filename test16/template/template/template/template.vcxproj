@@ -149,12 +149,14 @@
     <ClCompile Include="class_template.cpp" />
     <ClCompile Include="func_template.cpp" />
     <ClCompile Include="member_template.cpp" />
+    <ClCompile Include="special_template.cpp" />
     <ClCompile Include="template.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class_template.h" />
     <ClInclude Include="func_template.h" />
     <ClInclude Include="member_template.h" />
+    <ClInclude Include="special_template.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,6 +27,9 @@
     <ClCompile Include="member_template.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="special_template.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="func_template.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="member_template.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="special_template.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
